@@ -5,26 +5,33 @@
 // import MenuIcon from "@mui/icons-material/Menu";
 // import CloseIcon from "@mui/icons-material/Close";
 // import { motion, AnimatePresence } from "framer-motion";
+// import Loader from "./Loader";
+// import { usePathname } from "next/navigation";
 
 // export default function Navbar() {
 //   const [isOpen, setIsOpen] = useState(false);
+//   const [loading, setLoading] = useState(false);
+//   const pathname = usePathname();
 
+//   const handleLinkClick = () => {
+//     setIsOpen(false);
+//     setLoading(true);
+//   };
+
+//   // Loader triggers after pathname changes
 //   useEffect(() => {
-//     if (isOpen) {
-//       document.body.classList.add("overflow-hidden");
-//     } else {
-//       document.body.classList.remove("overflow-hidden");
+//     if (!pathname) return;
+
+//     if (loading) {
+//       const timer = setTimeout(() => setLoading(false), 700); // loader smooth delay
+//       return () => clearTimeout(timer);
 //     }
-//     return () => {
-//       document.body.classList.remove("overflow-hidden");
-//     };
-//   }, [isOpen]);
+//   }, [pathname, loading]);
 
 //   return (
 //     <>
 //       <nav className="bg-white shadow-md w-full fixed top-0 z-50">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-//           {/* Logo (hidden when mobile nav is open) */}
 //           <div
 //             className={`text-2xl font-bold text-indigo-600 transition-opacity duration-300 ${
 //               isOpen ? "opacity-0" : "opacity-100"
@@ -33,26 +40,30 @@
 //             <Link href="/">Bharat Pharma</Link>
 //           </div>
 
-//           {/* Desktop Links */}
 //           <div className="space-x-6 hidden md:flex">
-//             <Link href="/" className="text-gray-700 hover:text-indigo-600">
+//             <Link
+//               href="/"
+//               className="text-gray-700 hover:text-indigo-600"
+//               onClick={() => setLoading(true)}
+//             >
 //               Home
 //             </Link>
 //             <Link
 //               href="/services"
 //               className="text-gray-700 hover:text-indigo-600"
+//               onClick={() => setLoading(true)}
 //             >
 //               Services
 //             </Link>
 //             <Link
 //               href="/contact"
 //               className="text-gray-700 hover:text-indigo-600"
+//               onClick={() => setLoading(true)}
 //             >
 //               Contact
 //             </Link>
 //           </div>
 
-//           {/* Hamburger Icon */}
 //           <div className="md:hidden">
 //             <button onClick={() => setIsOpen(true)}>
 //               <MenuIcon fontSize="large" />
@@ -61,12 +72,12 @@
 //         </div>
 //       </nav>
 
-//       {/* AnimatePresence handles exit animation */}
+//       {/* Mobile Sidebar */}
 //       <AnimatePresence>
 //         {isOpen && (
 //           <>
-//             {/* Side Panel */}
 //             <motion.div
+//               suppressHydrationWarning
 //               initial={{ x: "100%" }}
 //               animate={{ x: 0 }}
 //               exit={{ x: "100%" }}
@@ -87,7 +98,7 @@
 //                   <Link
 //                     href="/"
 //                     className="text-gray-700 hover:text-indigo-600"
-//                     onClick={() => setIsOpen(false)}
+//                     onClick={handleLinkClick}
 //                   >
 //                     Home
 //                   </Link>
@@ -96,7 +107,7 @@
 //                   <Link
 //                     href="/services"
 //                     className="text-gray-700 hover:text-indigo-600"
-//                     onClick={() => setIsOpen(false)}
+//                     onClick={handleLinkClick}
 //                   >
 //                     Services
 //                   </Link>
@@ -105,7 +116,7 @@
 //                   <Link
 //                     href="/contact"
 //                     className="text-gray-700 hover:text-indigo-600"
-//                     onClick={() => setIsOpen(false)}
+//                     onClick={handleLinkClick}
 //                   >
 //                     Contact
 //                   </Link>
@@ -113,8 +124,8 @@
 //               </ul>
 //             </motion.div>
 
-//             {/* Overlay */}
 //             <motion.div
+//               suppressHydrationWarning
 //               initial={{ opacity: 0 }}
 //               animate={{ opacity: 0.4 }}
 //               exit={{ opacity: 0 }}
@@ -125,6 +136,9 @@
 //           </>
 //         )}
 //       </AnimatePresence>
+
+//       {/* Loader Component */}
+//       <Loader loading={loading} />
 //     </>
 //   );
 // }
@@ -135,6 +149,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // arrow icon
 import { motion, AnimatePresence } from "framer-motion";
 import Loader from "./Loader";
 import { usePathname } from "next/navigation";
@@ -142,6 +157,9 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+
   const pathname = usePathname();
 
   const handleLinkClick = () => {
@@ -149,23 +167,13 @@ export default function Navbar() {
     setLoading(true);
   };
 
-  // Loader triggers after pathname changes
   useEffect(() => {
     if (!pathname) return;
-
     if (loading) {
-      const timer = setTimeout(() => setLoading(false), 700); // loader smooth delay
+      const timer = setTimeout(() => setLoading(false), 700);
       return () => clearTimeout(timer);
     }
   }, [pathname, loading]);
-
-  // useEffect(() => {
-  //   if (isOpen || loading) {
-  //     document.body.classList.add("overflow-hidden");
-  //   } else {
-  //     document.body.classList.remove("overflow-hidden");
-  //   }
-  // }, [isOpen, loading]);
 
   return (
     <>
@@ -179,7 +187,7 @@ export default function Navbar() {
             <Link href="/">Bharat Pharma</Link>
           </div>
 
-          <div className="space-x-6 hidden md:flex">
+          <div className="space-x-6 hidden md:flex items-center">
             <Link
               href="/"
               className="text-gray-700 hover:text-indigo-600"
@@ -187,13 +195,56 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
-              href="/services"
-              className="text-gray-700 hover:text-indigo-600"
-              onClick={() => setLoading(true)}
+
+            {/* Services with Dropdown */}
+            <div
+              className="relative group"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
             >
-              Services
-            </Link>
+              <div className="flex items-center cursor-pointer text-gray-700 hover:text-indigo-600">
+                Services <ExpandMoreIcon fontSize="small" className="ml-1" />
+              </div>
+
+              {/* Dropdown */}
+              <AnimatePresence>
+                {dropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-50"
+                  >
+                    <Link
+                      href="/facilated/a"
+                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                      onClick={() => setLoading(true)}
+                    >
+                      Medical Oxygen Gas & Cylinders
+                    </Link>
+                    <hr style={{ color: "blue", border: "1px solid " }}></hr>
+                    <Link
+                      href="/facilated/b"
+                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                      onClick={() => setLoading(true)}
+                    >
+                      Hospital Furniture
+                    </Link>
+                    <hr style={{ color: "blue", border: "1px solid " }}></hr>
+
+                    <Link
+                      href="/facilated/c"
+                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-100 hover:text-indigo-600"
+                      onClick={() => setLoading(true)}
+                    >
+                      Medical Equipment
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <Link
               href="/contact"
               className="text-gray-700 hover:text-indigo-600"
@@ -227,7 +278,6 @@ export default function Navbar() {
                 <div className="text-xl font-semibold text-indigo-600 flex items-center justify-center w-full h-full">
                   Bharat Pharma
                 </div>
-
                 <button onClick={() => setIsOpen(false)}>
                   <CloseIcon />
                 </button>
@@ -243,13 +293,104 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  {/* <Link
                     href="/services"
                     className="text-gray-700 hover:text-indigo-600"
                     onClick={handleLinkClick}
                   >
                     Services
-                  </Link>
+                  </Link> */}
+
+                  {/* Services with Dropdown */}
+                  <div
+                    className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-indigo-600"
+                    onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                  >
+                    <span>Services</span>
+                    <ExpandMoreIcon
+                      className={`ml-1 transition-transform duration-300 ${
+                        mobileDropdownOpen ? "rotate-180" : ""
+                      }`}
+                      fontSize="small"
+                    />
+                  </div>
+
+                  {/* Dropdown Items */}
+                  <AnimatePresence>
+                    {mobileDropdownOpen && (
+                      // <motion.ul
+                      //   initial={{ height: 0, opacity: 0 }}
+                      //   animate={{ height: "auto", opacity: 1 }}
+                      //   exit={{ height: 0, opacity: 0 }}
+                      //   transition={{ duration: 0.3 }}
+                      //   className="ml-4 mt-2 space-y-2 overflow-hidden"
+                      // >
+                      //   <li>
+                      //     <Link
+                      //       href="/facilated/a"
+                      //       className="block text-gray-700 hover:text-indigo-600"
+                      //       onClick={handleLinkClick}
+                      //     >
+                      //       Medical Oxygen Gas & Cylinders
+                      //     </Link>
+                      //   </li>
+                      //   <li>
+                      //     <Link
+                      //       href="/facilated/b"
+                      //       className="block text-gray-700 hover:text-indigo-600"
+                      //       onClick={handleLinkClick}
+                      //     >
+                      //       Hospital Furniture
+                      //     </Link>
+                      //   </li>
+                      //   <li>
+                      //     <Link
+                      //       href="/facilated/c"
+                      //       className="block text-gray-700 hover:text-indigo-600"
+                      //       onClick={handleLinkClick}
+                      //     >
+                      //       Medical Equipment
+                      //     </Link>
+                      //   </li>
+                      // </motion.ul>
+
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="ml-4 mt-2 space-y-4 overflow-hidden"
+                      >
+                        <li className="bg-white rounded-lg shadow-md border px-4 py-3 hover:bg-indigo-50 transition">
+                          <Link
+                            href="/facilated/a"
+                            className="block text-gray-700 font-medium hover:text-indigo-600"
+                            onClick={handleLinkClick}
+                          >
+                            Medical Oxygen Gas & Cylinders
+                          </Link>
+                        </li>
+                        <li className="bg-white rounded-lg shadow-md border px-4 py-3 hover:bg-indigo-50 transition">
+                          <Link
+                            href="/facilated/b"
+                            className="block text-gray-700 font-medium hover:text-indigo-600"
+                            onClick={handleLinkClick}
+                          >
+                            Hospital Furniture
+                          </Link>
+                        </li>
+                        <li className="bg-white rounded-lg shadow-md border px-4 py-3 hover:bg-indigo-50 transition">
+                          <Link
+                            href="/facilated/c"
+                            className="block text-gray-700 font-medium hover:text-indigo-600"
+                            onClick={handleLinkClick}
+                          >
+                            Medical Equipment
+                          </Link>
+                        </li>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
                 </li>
                 <li>
                   <Link
@@ -276,7 +417,6 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Loader Component */}
       <Loader loading={loading} />
     </>
   );
