@@ -1,0 +1,65 @@
+.fab-whatsapp {
+    position: fixed;
+    top: calc(100vh - 170px); /* Use vh for responsive positioning */
+    right: 1.5rem; /* Adjust as needed */
+    background-color: rgba(239, 239, 239, 0.88);
+    z-index: 2;
+    border-radius: 9999px; /* Full rounding */
+    padding: 1rem; /* Padding similar to Tailwind's p-4 */
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(21, 29, 49, 0.24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.85s ease, transform 1s ease;
+  }
+  
+  .fab-whatsapp.hidden {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  
+  .fab-whatsapp.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .fab-whatsapp-icon {
+    font-size: 1.875rem; /* Equivalent to text-3xl */
+    color: #4CAF50; /* Equivalent to text-green-500 */
+    transition: duration 0.3s; /* Adjust as needed */
+  }
+
+  /* Location */
+  .fab-location {
+    position: fixed;
+    top: calc(100vh - 250px); /* Use vh for responsive positioning */
+    right: 1.5rem; /* Adjust as needed */
+    background-color: #363535;
+    z-index: 2;
+    border-radius: 9999px; /* Full rounding */
+    padding: 1rem; /* Padding similar to Tailwind's p-4 */
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(21, 29, 49, 0.24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.85s ease, transform 2s ease;
+  }
+  
+  .fab-location.hidden {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  
+  .fab-location.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .fab-location-icon {
+    font-size: 1.875rem; /* Equivalent to text-3xl */
+    color: white; /* Equivalent to text-white */
+  }
+  
+  

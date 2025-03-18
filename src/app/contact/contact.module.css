@@ -1,0 +1,203 @@
+.main {
+  background-image: url("/contact background1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.info {
+  z-index: 1;
+  text-align: left;
+  width: 80%;
+  text-align: center;
+  padding: 1.2rem;
+}
+.contactHeader {
+  padding-top: 20px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+.container {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  /* transform: translateY(-10px); */
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.1); /* Adjust color as needed */
+  transition: top 0.3s ease;
+  z-index: 0;
+}
+
+.card:hover::before {
+  top: 0;
+}
+
+.card h2,
+.card p,
+.card .button {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 760px) {
+  .info {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+.infoWindow {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  letter-spacing: 0.5px;
+}
+
+.subTitle {
+  color: rgb(253, 186, 116);
+  font-size: 24px;
+  margin-bottom: 0.4rem;
+}
+
+.description {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.container {
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: rgb(251, 251, 251); /* Transparent background */
+  padding: 40px;
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  text-align: center;
+  backdrop-filter: blur(50px); /* Blurring the background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for the glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 5px 0;
+  /* color: rgb(240, 177, 93); */
+}
+
+.email {
+  color: rgb(22, 22, 157);
+  font-weight: 400;
+
+  /* color: rgb(0, 72, 206); */
+}
+.email:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #0056b3; /* Optional: Darken the color slightly on hover */
+  cursor: pointer;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  border: 1px solid rgb(22, 22, 157);
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(22, 22, 157);
+}
+
+.faq {
+  margin-top: 40px;
+}
+
+.accordion {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accordionSummary {
+  padding: 10px;
+  background: #f7f7f7;
+  font-weight: bold;
+}
+
+.accordionDetails {
+  padding: 10px;
+}
+
+.feedback {
+  margin-top: 10px;
+}
+
+.thumbUp,
+.thumbDown {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.expanded .accordionSummary {
+  background: #e0e0e0;
+}
