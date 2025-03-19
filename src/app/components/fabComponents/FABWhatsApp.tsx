@@ -9,13 +9,13 @@ import "./style.css";
 const FABWhatsApp = () => {
   const scrolling = useScrolling({ fallbackTime: 750 });
 
-  const contactCakeHeaven = () => {
+  const contactBharatPharma = () => {
     contactOnWhatsapp(whatsappNumber, whatsAppContactMsg);
   };
 
   return (
     <button
-      onClick={contactCakeHeaven}
+      onClick={contactBharatPharma}
       className={`fab-whatsapp ${!scrolling ? "visible" : "hidden"}`}
     >
       <FaWhatsapp className="fab-whatsapp-icon" />
