@@ -7,45 +7,75 @@ import { whatsAppContactMsg, whatsappNumber } from "../../common/constant";
 
 const services = {
   a: {
-    title: "Service A",
+    title: "Medical Oxygen & Gas Solutions",
     description:
-      "Welcome to Service A! We provide top-notch medical equipment rental and sales.",
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
     features: [
-      "Oxygen Concentrator Rentals",
-      "Hospital Beds & Furniture",
-      "Medical Oxygen Cylinders",
-      "24/7 Equipment Support",
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
     ],
     images: [
       {
         src: "/images/a/1.jpg",
-        label: "Small Fragment - Locking",
+        label: "Small Medical Oxygen Cylinder",
         specifications: [
-          "Material: Titanium",
-          "Size: 5mm x 100mm",
-          "Usage: Orthopedic Surgery",
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
         ],
       },
       {
         src: "/images/a/2.jpg",
-        label: "Small Fragment - Standard",
+        label: "Large Medical Oxygen Cylinder",
         specifications: [
-          "Material: Stainless Steel",
-          "Size: 4mm x 80mm",
-          "Usage: Fracture Fixation",
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
         ],
       },
       {
         src: "/images/a/3.jpg",
-        label: "Large Fragment - Locking",
+        label: "Portable Oxygen Cylinder Kit",
         specifications: [
-          "Material: Stainless Steel",
-          "Size: 4mm x 80mm",
-          "Usage: Fracture Fixation",
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
         ],
       },
     ],
   },
+
   b: {
     title: "Service B",
     description:
@@ -123,38 +153,45 @@ export default function ServicePage({
         ))}
       </div>
 
-      {/* Modal */}
       {modalData && (
-        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg max-w-md h-[50vh] w-full p-6 relative">
+        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 px-4">
+          <div className="bg-white rounded-lg w-full max-w-2xl p-6 relative overflow-y-auto max-h-[90vh]">
+            {/* Close Button */}
             <button
               onClick={() => setModalData(null)}
               className="absolute top-2 right-2 text-xl font-bold"
             >
               ✕
             </button>
+
+            {/* Image */}
             <img
               src={modalData.src}
               alt={modalData.label}
-              className="w-full rounded-md mb-4 "
+              className="w-full rounded-md mb-4"
             />
-            <h2 className="text-lg font-bold mb-2">{modalData.label}</h2>
-            <ul className="list-disc list-inside text-sm space-y-1 text-gray-700">
+
+            {/* Title */}
+            <h2 className="text-xl font-bold mb-3">{modalData.label}</h2>
+
+            {/* Specs */}
+            <ul className="list-disc list-inside text-sm space-y-1 text-gray-700 mb-4">
               {modalData.specifications.map((spec: string, i: number) => (
                 <li key={i}>{spec}</li>
               ))}
             </ul>
+
             {/* WhatsApp Button */}
             <button
               onClick={() => {
                 const specsText = modalData.specifications.join("\n- ");
                 const message = `Hi, I'm interested in: *${modalData.label}*\n\nSpecifications:\n- ${specsText}`;
-                contactOnWhatsapp(whatsappNumber, message); // use your number here
+                contactOnWhatsapp(whatsappNumber, message);
               }}
-              className="mt-4 bg-green-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-green-700 transition absolute bottom-4 left-1/2 -translate-x-1/2"
+              className="bg-green-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-green-700 transition w-full"
             >
-              Buy Now on WhatsApp
-            </button>{" "}
+              Buy / Rent Now on WhatsApp
+            </button>
           </div>
         </div>
       )}
