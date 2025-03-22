@@ -3,10 +3,11 @@ import {
   phoneNumber,
   whatsappNumber,
 } from "@/app/common/constant";
-import styles from "./styles/Footer.module.css";
+import styles from "./Styles/Footer.module.css";
 import Link from "next/link";
 
-const Footer = ({ year }: { year: number }) => {
+const Footer = () => {
+  // const Footer = ({ year }: { year: number }) => {
   return (
     <>
       <div className={styles.relative}>
@@ -14,7 +15,6 @@ const Footer = ({ year }: { year: number }) => {
           <div className={`${styles.footerBorder}`}>
             <div className={`${styles.logoContainer}`}>
               <img
-                // src={dealMagsilLogo}
                 src="/logo1.png"
                 alt="Bharat Pharma Logo"
                 className={styles.logo}
@@ -125,9 +125,9 @@ const Footer = ({ year }: { year: number }) => {
       </div>
       <div className={styles.footerEnd}>
         <p className={styles.footerTextEnd}>
-          <span style={{ fontWeight: "700" }}>
+          {/* <span style={{ fontWeight: "700" }}>
             &copy; {new Date().getFullYear()} Bharat Pharma.
-          </span>{" "}
+          </span>{" "} */}
           All rights reserved.
         </p>
       </div>

@@ -1,5 +1,3 @@
-// REMOVE "use client"; here 👇 (server component by default)
-"use Client";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -20,7 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Bharat Pharma",
-  description: "Your description",
+  description:
+    "Medical Oxygen Gas, Concentrators, Hospital Furniture & More - Rental & Ownership | Bharat Pharma",
 };
 
 export default function RootLayout({
@@ -29,15 +28,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar /> {/* make sure Navbar itself has "use client" if needed */}
+        <Navbar />
         {children}
         <FABLocation />
         <FABWhatsApp />
-        <Footer year={new Date().getFullYear()} />
+        <Footer />
+        {/* <Footer year={new Date().getFullYear()} /> */}
       </body>
     </html>
   );

@@ -1,6 +1,21 @@
-import React from "react";
+"use client";
 
+import React, { useEffect, useState } from "react";
+
+if (typeof window !== "undefined") {
+  // Animation code here
+  <div>hi there is some issue</div>;
+}
 const StatsSection: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <section className="relative pt-32 pb-16 overflow-hidden">
       {/* Background image with overlay */}
