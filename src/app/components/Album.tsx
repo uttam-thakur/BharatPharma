@@ -6,6 +6,7 @@ const Album = () => {
     <div className={styles.album}>
       <div className={`${styles.responsiveContainerBlock} ${styles.bg}`}>
         <div className={`${styles.responsiveContainerBlock} ${styles.imgCont}`}>
+          {/* image section */}
           <img
             className={styles.img}
             src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.4.svg"

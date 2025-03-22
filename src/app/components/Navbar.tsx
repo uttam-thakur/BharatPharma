@@ -89,7 +89,7 @@ export default function Navbar() {
                         href="/facilated/c"
                         className="text-gray-700 hover:text-indigo-600"
                       >
-                        Medical Equipment
+                        Medical Equipments
                       </Link>
 
                       <Link

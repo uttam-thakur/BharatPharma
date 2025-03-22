@@ -147,7 +147,7 @@ export default function ServicePage({
             />
             <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white p-4 text-center">
               <h3 className="text-sm font-semibold">{img.label}</h3>
-              <p className="text-xs underline mt-1">More...</p>
+              <p className="text-xs underline mt-1">More....</p>
             </div>
           </div>
         ))}
