@@ -1,7 +1,7 @@
 // pages/about.tsx
 import Image from "next/image";
 import styles from "../aboutus/About.module.css";
-import Album from "../pages/Album";
+import Album from "../components/Album";
 import VisionMission from "../components/VisionMission";
 
 const About = () => {
