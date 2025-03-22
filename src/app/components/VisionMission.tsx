@@ -17,7 +17,7 @@ export default function VisionMission() {
           <p className="text-gray-600 leading-relaxed">
             To be the leading provider of medical equipment and services,
             empowering healthcare facilities to deliver top-notch patient care
-            globally.
+            globally..
           </p>
           <div className="h-1 w-20 bg-red-600 rounded"></div>
         </motion.div>

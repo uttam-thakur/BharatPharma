@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { useState } from "react";
 import { use } from "react";
 import { contactOnWhatsapp } from "../../common/helper";
-import { whatsAppContactMsg, whatsappNumber } from "../../common/constant";
+import { whatsappNumber } from "../../common/constant";
 
 const services = {
   a: {
