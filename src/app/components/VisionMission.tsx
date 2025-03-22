@@ -21,7 +21,6 @@ export default function VisionMission() {
           </p>
           <div className="h-1 w-20 bg-red-600 rounded"></div>
         </motion.div>
-        {/* Mission */}
         <motion.div
           className="space-y-5"
           initial={{ opacity: 0, y: 40 }}
