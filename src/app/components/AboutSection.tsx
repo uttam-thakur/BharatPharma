@@ -1,32 +1,28 @@
+"use client";
+
 // src/components/AboutSection.tsx
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./Home";
 
 const AboutSection: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <>
       <Home />
 
       <section className="bg-blue-100 py-16 px-4 md:px-20">
-        {/* <div className="absolute bottom-0 left-0 w-full z-10">
-          <svg
-            viewBox="0 0 1440 320"
-            preserveAspectRatio="none"
-            className="w-screen h-32 md:h-40"
-          >
-            <path
-              fill="white"
-              fillOpacity="1"
-              d="M0,160 C360,260 1080,60 1440,160 L1440,0 L0,0 Z"
-            ></path>
-          </svg>
-        </div> */}
-
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center mt-20">
           <div className="relative rounded-xl overflow-hidden">
             <Image
-              // src="/file.svg"
               src="/about.jfif"
               alt="About Bharat Pharma"
               width={250}
