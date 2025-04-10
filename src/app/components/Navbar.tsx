@@ -154,6 +154,13 @@ export default function Navbar() {
             </div>
 
             <Link
+              href="/blog"
+              className="text-gray-700 hover:text-indigo-600"
+              onClick={() => setLoading(true)}
+            >
+              Blog
+            </Link>
+            <Link
               href="/contact"
               className="text-gray-700 hover:text-indigo-600"
               onClick={() => setLoading(true)}

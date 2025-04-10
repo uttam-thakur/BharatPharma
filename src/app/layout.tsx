@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import FABLocation from "./components/fabComponents/FABLocation";
 import FABWhatsApp from "./components/fabComponents/FABWhatsApp";
+import CertificatePage from "./components/Certificate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

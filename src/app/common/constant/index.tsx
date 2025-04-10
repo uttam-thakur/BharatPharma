@@ -50,6 +50,13 @@ export const infoData = {
     "We believe that good communication builds strong partnerships. Whether you have a quick question, require detailed information, or need help resolving a challenge, we’re just a click or call away. Our dedicated team ensures that every query is met with promptness and expertise, helping you achieve the results you need.",
 };
 
+export const infoDataHome = {
+  title: "Reliable Medical Equipment, Anytime You Need",
+  subTitle: "Your trusted partner for healthcare solutions.",
+  description:
+    "We provide high-quality medical oxygen cylinders, concentrators, hospital furniture, and equipment on rental and purchase options. Whether you're a healthcare provider or need home medical support, our expert team is here to assist you with reliable, certified solutions.",
+};
+
 export const contactData = [
   {
     title: "Chat to sales",
