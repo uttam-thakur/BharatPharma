@@ -50,12 +50,38 @@ export const infoData = {
     "We believe that good communication builds strong partnerships. Whether you have a quick question, require detailed information, or need help resolving a challenge, we’re just a click or call away. Our dedicated team ensures that every query is met with promptness and expertise, helping you achieve the results you need.",
 };
 
-export const infoDataHome = {
-  title: "Reliable Medical Equipment, Anytime You Need",
-  subTitle: "Your trusted partner for healthcare solutions.",
-  description:
-    "We provide high-quality medical oxygen cylinders, concentrators, hospital furniture, and equipment on rental and purchase options. Whether you're a healthcare provider or need home medical support, our expert team is here to assist you with reliable, certified solutions.",
-};
+// export const infoDataHome = {
+//   title: "Reliable Medical Equipment, Anytime You Need",
+//   subTitle: "Your trusted partner for healthcare solutions.",
+//   description:
+//     "We provide high-quality medical oxygen cylinders, concentrators, hospital furniture, and equipment on rental and purchase options. Whether you're a healthcare provider or need home medical support, our expert team is here to assist you with reliable, certified solutions.",
+// };
+
+// data/infoDataHome.ts
+
+export const infoDataHome: any = [
+  {
+    image: "/background1.jpg",
+    title: "Reliable Medical Equipment, Anytime You Need",
+    subTitle: "Your trusted partner for healthcare solutions.",
+    description:
+      "We provide high-quality medical oxygen cylinders, concentrators, hospital furniture, and equipment on rental and purchase options. Whether you're a healthcare provider or need home medical support, our expert team is here to assist you with reliable, certified solutions.",
+  },
+  {
+    image: "/background4.jpg",
+    title: "Rent or Own – Flexible Options",
+    subTitle: "Tailored solutions for every medical need",
+    description:
+      "Choose from a wide range of hospital beds, wheelchairs, and diagnostic tools available on rental or purchase, delivered and maintained by experts.",
+  },
+  {
+    image: "/background2.jpg",
+    title: "24/7 Medical Support Available",
+    subTitle: "Emergency help when you need it most",
+    description:
+      "We offer rapid delivery and installation of oxygen systems and critical care equipment, ensuring safety and support during emergencies at home or in facilities.",
+  },
+];
 
 export const contactData = [
   {

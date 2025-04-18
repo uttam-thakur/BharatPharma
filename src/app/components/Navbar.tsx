@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // arrow icon
 import { motion, AnimatePresence } from "framer-motion";
 import Loader from "./Loader";
 import { usePathname } from "next/navigation";
+import { MdAccessTime, MdEmail, MdCall } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,36 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-white shadow-md w-full fixed top-0 z-50">
+        <div className="bg-gray-900 text-white text-sm py-3 px-4 z-50 relative">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div className="flex-1 flex justify-center md:justify-start items-center space-x-2 ">
+              <MdAccessTime className="w-7 h-7 text-red-600" />
+
+              <span>Opening Hour: 9:00 am - 10:00 pm</span>
+            </div>
+            <div className="flex-1 flex justify-center items-center space-x-2">
+              <MdEmail className="w-7 h-7 text-red-600" />
+
+              <a
+                href="mailto:carevancepharma@gmail.com"
+                className="hover:underline text-center"
+              >
+                bharatpharma@gmail.com
+              </a>
+            </div>
+            <div className="flex-1 flex justify-center md:justify-end items-center space-x-2">
+              <MdCall className="w-7 h-7 text-red-600" />
+
+              <a
+                href="tel:+919817441724"
+                className="hover:underline text-center"
+              >
+                +91 8670288140
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
           <div
             className={`text-2xl font-bold text-indigo-600 transition-opacity duration-300 ${

@@ -1,55 +1,74 @@
-import React from "react";
-
+"use client";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { infoDataHome } from "../common/constant";
-
 import styles from "./Styles/Home.module.css";
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () =>
+    setCurrentIndex((prev) => (prev + 1) % infoDataHome.length);
+  const prevSlide = () =>
+    setCurrentIndex(
+      (prev) => (prev - 1 + infoDataHome.length) % infoDataHome.length
+    );
+
+  const currentSlide = infoDataHome[currentIndex];
   return (
-    <>
-      <div className={styles.main}>
-        <div className="absolute -bottom-40 left-0 w-full z-10">
-          <svg
-            viewBox="0 0 1440 320"
-            preserveAspectRatio="none"
-            className="w-screen h-32 md:h-40"
-          >
-            <path
-              fill="white"
-              fillOpacity="1"
-              d="M0,160 C360,260 1080,60 1440,160 L1440,0 L0,0 Z"
-            ></path>
-          </svg>
-        </div>
-        <div className={styles.info}>
-          <div className={styles.title}>{infoDataHome.title}</div>
-          <div className={styles.infoWindow}>
-            <div className={styles.subTitle}>{infoDataHome.subTitle}</div>
-            <div className={styles.description}>{infoDataHome.description}</div>
-          </div>
-        </div>
+    <div
+      className="relative flex items-center justify-center h-[100svh] bg-cover bg-center transition-all duration-700"
+      style={{ backgroundImage: `url(${currentSlide.image})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-0" />
+
+      {/* SVG Bottom Curve */}
+      <div className="absolute -bottom-40 left-0 w-full z-10">
+        <svg
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          className="w-screen h-32 md:h-40"
+        >
+          <path
+            fill="white"
+            fillOpacity="1"
+            d="M0,160 C360,260 1080,60 1440,160 L1440,0 L0,0 Z"
+          ></path>
+        </svg>
       </div>
-    </>
+
+      {/* Text with Animation */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          className="relative z-10 text-white text-center max-w-2xl px-4"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -40 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <div className={styles.title}>{currentSlide.title}</div>
+          <div className={styles.infoWindow}>
+            <div className={styles.subTitle}>{currentSlide.subTitle}</div>
+            <div className={styles.description}>{currentSlide.description}</div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-20 cursor-pointer hover:scale-110 transition"
+      >
+        ❮
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-20 cursor-pointer hover:scale-110 transition"
+      >
+        ❯
+      </button>
+    </div>
   );
 }
-
-// import React from "react";
-// import styles from "./Styles/Home.module.css";
-
-// export default function Home() {
-//   return (
-//     <div className={styles.heroSection}>
-//       <div className={styles.overlay}></div>
-
-//       <div className={styles.heroContent}>
-//         <p className={styles.topLabel}>We will Help You</p>
-//         <h1 className={styles.mainHeading}>To Live Healthy Life</h1>
-//         <p className={styles.subText}>
-//           Our mission is to build a healthier tomorrow for patients <br />
-//           with progressive non-viral liver diseases
-//         </p>
-//         <button className={styles.ctaBtn}>Discover Now</button>
-//       </div>
-//     </div>
-//   );
-// }
