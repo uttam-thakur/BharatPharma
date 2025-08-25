@@ -2,6 +2,7 @@
 import Head from "next/head";
 import AboutSection from "../components/AboutSection";
 import StatsSection from "../components/StatsSection";
+import CertificatePage from "../components/Certificate";
 
 const Home = () => {
   return (

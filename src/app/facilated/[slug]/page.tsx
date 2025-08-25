@@ -77,7 +77,7 @@ const services = {
   },
 
   b: {
-    title: "Service B",
+    title: "Hospital Furniture",
     description:
       "Service B focuses on advanced hospital furniture and patient mobility solutions.",
     features: [
@@ -89,7 +89,7 @@ const services = {
     images: ["/images/b/1.jpg", "/images/b/2.jpg", "/images/b/3.jpg"],
   },
   c: {
-    title: "Service C",
+    title: "Medical Equipments",
     description:
       "Service C specializes in diagnostic and surgical medical equipment distribution.",
     features: [
@@ -104,6 +104,573 @@ const services = {
       "/images/service-a-3.jpg",
     ],
   },
+
+ d: {
+    title: "Orthopaedic Implants",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+
+   e: {
+    title: "General Surgical Instruments",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+   f: {
+    title: "Medical Disposables",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+
+   g: {
+    title: "Diagnostic Equipments",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+
+   h: {
+    title: "Anaesthesia Product",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+
+   i: {
+    title: "Height & Weight Scales",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+
+   j: {
+    title: " Laboratory Products",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
+
+   k: {
+    title: " Emergency Products",
+    description:
+      "We specialize in supplying high-quality medical gases and cylinders for healthcare facilities, ensuring optimal patient care and safety. Our product line includes various types of oxygen cylinders and medical gases suitable for hospitals, clinics, and homecare services.",
+    features: [
+      "Medical Oxygen Cylinder Rentals & Sales",
+      "Nitrous Oxide & Carbon Dioxide Cylinders",
+      "Portable Oxygen Concentrators",
+      "Regulators & Flowmeters",
+      "24/7 Emergency Gas Supply Support",
+    ],
+    images: [
+      {
+        src: "/images/a/1.jpg",
+        label: "Small Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 10 Liters (1.5 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150 Bar",
+          "Usage: Homecare / Ambulance",
+          "Certification: BIS/ISO Approved",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Large Medical Oxygen Cylinder",
+        specifications: [
+          "Capacity: 46.7 Liters (7 m³)",
+          "Material: Seamless Steel",
+          "Pressure: 150-200 Bar",
+          "Usage: Hospital / ICU / Industrial Use",
+          "Certification: PESO & ISO Certified",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Portable Oxygen Cylinder Kit",
+        specifications: [
+          "Capacity: 2.5 Liters (Portable)",
+          "Includes: Cylinder, Regulator & Mask",
+          "Usage: Emergency / Travel",
+          "Weight: Approx. 5 Kg",
+          "Certification: BIS Compliant",
+        ],
+      },
+      {
+        src: "/images/a/2.jpg",
+        label: "Nitrous Oxide Cylinder",
+        specifications: [
+          "Capacity: 10 kg / 30 kg",
+          "Material: Steel Alloy",
+          "Usage: Anesthesia, Surgical Procedures",
+          "Pressure: 150 Bar",
+          "Color Code: Blue Body, Black Neck",
+        ],
+      },
+      {
+        src: "/images/a/3.jpg",
+        label: "Carbon Dioxide (CO2) Cylinder",
+        specifications: [
+          "Capacity: 6.8 kg / 22 kg",
+          "Usage: Respiratory Therapy, Cryotherapy",
+          "Material: Carbon Steel",
+          "Pressure: 150-200 Bar",
+          "Color Code: Grey Body",
+        ],
+      },
+    ],
+  },
+
 };
 
 type Params = {
@@ -124,7 +691,7 @@ export default function ServicePage({
   if (!service) return notFound();
 
   return (
-    <div className="pt-20 pb-10 max-w-5xl mx-auto px-4">
+    <div className="pt-35 pb-10 max-w-5xl mx-auto px-4">
       <h1 className="text-4xl font-bold text-indigo-600 mb-6">
         {service.title}
       </h1>

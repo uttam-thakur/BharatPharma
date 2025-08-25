@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import { toast } from "react-toastify";
 import { sendEmail } from "../services/services";
-import styles from "./styles/GetInTouch.module.css";
+import styles from "./Styles/GetInTouch.module.css";
 
 export default function GetInTouchForm() {
   const formRef = useRef(null);

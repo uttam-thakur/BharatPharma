@@ -16,6 +16,7 @@ const About = () => {
             height={400}
             className={styles.image}
           />
+          {/* description */}
           <div className={styles.mission}>
             <p>
               At Bharat Pharma, our vision is to be the foremost provider of

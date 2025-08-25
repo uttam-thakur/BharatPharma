@@ -1,5 +1,5 @@
 // components/Album.tsx
-import styles from "../components/styles/Album.module.css";
+import styles from "../components/Styles/Album.module.css";
 
 const Album = () => {
   return (

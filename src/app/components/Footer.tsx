@@ -15,7 +15,7 @@ const Footer = () => {
           <div className={`${styles.footerBorder}`}>
             <div className={`${styles.logoContainer}`}>
               <img
-                src="/logo1.png"
+                src="/logo4.png"
                 alt="Bharat Pharma Logo"
                 className={styles.logo}
               />
