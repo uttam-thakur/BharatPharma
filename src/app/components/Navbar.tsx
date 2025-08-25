@@ -65,13 +65,29 @@ export default function Navbar() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-          <div
+          {/* <div
             className={`text-2xl font-bold text-indigo-600 transition-opacity duration-300 ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           >
             <Link href="/">Bharat Pharma</Link>
-          </div>
+          </div> */}
+
+<div
+  className={`flex items-center gap-2 text-2xl font-bold text-indigo-600 transition-opacity duration-300 ${
+    isOpen ? "opacity-0" : "opacity-100"
+  }`}
+>
+  <Link href="/" className="flex items-center gap-2">
+    <img
+      src="/logo7.png"  // <-- replace with your logo path
+      alt="Bharat Pharma Logo"
+      className="h-18 w-18 object-contain"
+    />
+    Bharat Pharma
+  </Link>
+</div>
+
 
           <div className="space-x-6 hidden md:flex items-center">
             <Link
