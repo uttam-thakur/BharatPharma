@@ -16,6 +16,7 @@ export default function Home() {
 
   const currentSlide = infoDataHome[currentIndex];
   return (
+     <>
     <div
       className="relative flex items-center justify-center h-[100svh] bg-cover bg-center transition-all duration-700"
       style={{ backgroundImage: `url(${currentSlide.image})` }}
@@ -59,16 +60,31 @@ export default function Home() {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl z-20 cursor-pointer hover:scale-110 transition"
+        className="absolute left-4 
+        top-1/2 -translate-y-1/2
+        text-white text-3xl z-20 cursor-pointer 
+        hover:scale-110 transition
+        sm:top-1/2 sm:-translate-y-1/2   
+        top-[65%] -translate-y-1/2
+        "
       >
         ❮
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl z-20 cursor-pointer hover:scale-110 transition"
+        className="absolute right-4 
+        top-1/2 -translate-y-1/2 
+        text-white text-3xl z-20 
+        cursor-pointer 
+        hover:scale-110 transition
+        sm:top-1/2 sm:-translate-y-1/2   
+        top-[65%] -translate-y-1/2
+        "
       >
         ❯
       </button>
     </div>
+
+   </>
   );
 }

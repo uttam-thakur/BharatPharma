@@ -82,7 +82,7 @@ export default function Navbar() {
     <img
       src="/logo7.png"  // <-- replace with your logo path
       alt="Bharat Pharma Logo"
-      className="h-18 w-18 object-contain"
+      className="h-16 w-18 object-contain"
     />
     Bharat Pharma
   </Link>

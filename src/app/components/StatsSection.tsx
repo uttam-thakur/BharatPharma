@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import CertificatePage from "./Certificate";
 
 if (typeof window !== "undefined") {
   // Animation code here
@@ -17,6 +18,7 @@ const StatsSection: React.FC = () => {
     return null;
   }
   return (
+    <>
     <section className="relative pt-32 pb-16 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
@@ -69,6 +71,8 @@ const StatsSection: React.FC = () => {
         </div>
       </div>
     </section>
+    <CertificatePage/>
+    </>
   );
 };
 
