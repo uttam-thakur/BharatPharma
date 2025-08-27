@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bharat Pharma",
+  title: "Bharat Pharma | 8670288140",
   description:
     "Medical Oxygen Gas, Concentrators, Hospital Furniture & More - Rental & Ownership | Bharat Pharma",
 };
