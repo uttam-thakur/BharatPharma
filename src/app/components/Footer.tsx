@@ -123,14 +123,23 @@ const Footer = () => {
           </div>
         </footer>
       </div>
-      <div className={styles.footerEnd}>
-        <p className={styles.footerTextEnd}>
-          {/* <span style={{ fontWeight: "700" }}>
-            &copy; {new Date().getFullYear()} Bharat Pharma.
-          </span>{" "} */}
-          All rights reserved.
-        </p>
-      </div>
+     <div className={styles.footerEnd}>
+  <p className={styles.footerTextEnd}>
+    <span style={{ fontWeight: "700" }}>
+      &copy; {new Date().getFullYear()} Bharat Pharma.
+    </span>{" "}
+    All rights reserved. | Designed & Developed by{" "}
+    <a
+      href="https://www.bhookhadtech.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "#0ea5e9", fontWeight: "600", textDecoration: "none" }}
+    >
+      Bhookhad Tech
+    </a>
+  </p>
+</div>
+
     </>
   );
 };

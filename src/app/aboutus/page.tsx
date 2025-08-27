@@ -10,10 +10,10 @@ const About = () => {
       <div className={styles.container}>
         <div className={styles.profileSection}>
           <Image
-            src="/images/feedback/5.png"
+            src="/images/feedback/CEO.png"
             alt="Binod Kumar Rajak"
             width={400}
-            height={400}
+            height={100}
             className={styles.image}
           />
           {/* description */}

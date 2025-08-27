@@ -691,7 +691,7 @@ export default function ServicePage({
   if (!service) return notFound();
 
   return (
-    <div className="pt-35 pb-10 max-w-5xl mx-auto px-4">
+    <div className="pt-50  md:pt-35  pb-10 max-w-5xl mx-auto px-4">
       <h1 className="text-4xl font-bold text-indigo-600 mb-6">
         {service.title}
       </h1>
