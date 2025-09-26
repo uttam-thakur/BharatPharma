@@ -55,10 +55,10 @@ export default function Navbar() {
               <MdCall className="w-7 h-7 text-red-600" />
 
               <a
-                href="tel:+919817441724"
+                href="tel:+918637545685"
                 className="hover:underline text-center"
               >
-                +91 8670288140
+                +91 8637545685
               </a>
             </div>
           </div>

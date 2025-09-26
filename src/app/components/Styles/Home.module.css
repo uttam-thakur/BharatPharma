@@ -88,12 +88,7 @@
   z-index: 1;
 }
 
-@media (max-width: 760px) {
-  .info {
-    width: 100%;
-    padding: 16px;
-  }
-}
+
 
 .infoWindow {
   display: flex;
@@ -106,7 +101,8 @@
   color: white;
   font-size: 36px;
   letter-spacing: 0.5px;
-  margin-top: 50%;
+  margin-top: 20%;
+
 }
 
 .subTitle {
@@ -211,4 +207,18 @@
 
 .expanded .accordionSummary {
   background: #e0e0e0;
+}
+@media (max-width: 760px) {
+  .info {
+    width: 100%;
+    padding: 16px;
+  }
+  
+}
+@media (max-width: 600px) {
+.title{
+  margin-top: 50%;
+
+  }
+
 }
