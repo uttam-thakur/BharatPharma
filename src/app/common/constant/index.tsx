@@ -1,6 +1,6 @@
-export const phoneNumber = 8670288140;
+export const phoneNumber = 8637545685;
 
-export const whatsappNumber = 8670288140;
+export const whatsappNumber = 8637545685;
 
 export const dealMagsilLogo = "/images/dmlogo.jpeg";
 
@@ -8,7 +8,7 @@ const message = `Thank you for contacting pharma.
 Kindly share your requirement, we would be more than happy to help you. 
 
 You can contact us on: 
-📞 9332331442
+📞 8637545685
 🖥 🌍 www.pharma.com 🌏
 📨 abc@gmail.com
 📲 https://www.facebook.com/abc
@@ -103,6 +103,6 @@ export const contactData = [
   {
     title: "Call us",
     description: "Mon-Fri from 8am to 5pm.",
-    contactInfo: "+91 8670288140",
+    contactInfo: "+91 ",
   },
 ];
