@@ -22,7 +22,7 @@ const About = () => {
          At Bharat Pharma, our vision is to be the leading provider of premium medical equipment solutions, setting the benchmark for quality, reliability, and innovation in India’s healthcare sector. With decades of expertise, we are committed to delivering excellence through advanced technology, trusted global brands, and rigorous quality standards. As a registered S.S.I. Unit with the Government of West Bengal, and a trusted partner to hospitals, clinics, and healthcare institutions, we play a vital role in critical projects such as supplying medical oxygen cylinders, concentrators, hospital furniture, and diagnostic equipment. Our dedication to innovation, combined with a skilled team and modern infrastructure, enables us to support both government healthcare initiatives and private enterprises, delivering solutions that improve patient care, ensure safety, and drive sustainable healthcare growth nationwide.
             </p>
             <p className={styles.name}>Binod Kumar Rajak</p>
-            <p className={styles.role}>Founder & CEO - Bharat Pharma</p>
+            <p className={styles.role}>Founder & CEO -Bharat Pharma</p>
           </div>
         </div>
         <div className={styles.description}>
